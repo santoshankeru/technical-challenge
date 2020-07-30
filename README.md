@@ -15,9 +15,9 @@ The user must be able to:
 - List the already added gifts of the list 
 - Purchase a gift from the list
 - Generate a report from the list which will print out the gifts and their statuses.
-- The report must include two sections:
-  - Purchased gifts: each purchased gift with their details.
-  - Not purchased gifts: each available gift with their details.
+  - The report must include two sections:
+    - Purchased gifts: each purchased gift with their details.
+    - Not purchased gifts: each available gift with their details.
 
 You can find some provided products in the `products.json` file.
 
