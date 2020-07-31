@@ -46,7 +46,7 @@ _Hint: We’re looking for a high-quality submission with great application arch
 - Problem Solving (5 points max)
 - Automated Tests (5 points max)
 
-Scoring algoithm:
+Scoring algorithm:
 
 ```python
 
