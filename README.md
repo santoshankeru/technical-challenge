@@ -29,7 +29,6 @@ _Hint: We’re looking for a high-quality submission with great application arch
 
 ## Extra mile bonus points
 
-
 - Application logging
 - Containerisation
 - Authentication
@@ -40,12 +39,25 @@ _Hint: We’re looking for a high-quality submission with great application arch
 
 ## What we will be assessing
 
-- Functionality - does it work?
-- Code Quality
-- Solution Design
-- Data structures
-- Problem Solving
-- Automated Tests
+- Functionality - does it work? (5 points max)
+- Code Quality (5 points max)
+- Solution Design (5 points max)
+- Data structures (5 points max)
+- Problem Solving (5 points max)
+- Automated Tests (5 points max)
+
+Scoring algoithm:
+
+```python
+
+def have_you_passed_the_test(overall_score, bonus_points):
+    if overall_score >= 24:
+        return True
+    elif overall_score > 21:
+        return overall_score + bonus_points >= 24
+
+    return False
+```
 
 ## Improvements
 
