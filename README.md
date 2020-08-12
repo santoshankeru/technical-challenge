@@ -41,7 +41,7 @@ _Hint: We’re looking for a high-quality submission with great application arch
 
 
 | Area | Max score |
-|----|----|
+|----|----:|
 | Functionality (does it work?) | 5 points|
 | Code Quality |5 points|
 | Solution Design |5 points|
