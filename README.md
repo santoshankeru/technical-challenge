@@ -39,12 +39,17 @@ _Hint: We’re looking for a high-quality submission with great application arch
 
 ## What we will be assessing
 
-- Functionality - does it work? (5 points max)
-- Code Quality (5 points max)
-- Solution Design (5 points max)
-- Data structures (5 points max)
-- Problem Solving (5 points max)
-- Automated Tests (5 points max)
+
+| Area | Max score |
+|----|----|
+| Functionality (does it work?) | 5 points|
+| Code Quality |5 points|
+| Solution Design |5 points|
+| Data structures |5 points|
+| Problem Solving |5 points|
+| Automated Tests |5 points|
+|**Overall Score**|**30 points**|
+
 
 Scoring algorithm:
 
