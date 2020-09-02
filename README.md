@@ -45,10 +45,9 @@ _Hint: We’re looking for a high-quality submission with great application arch
 | Functionality (does it work?) | 5 points|
 | Code Quality |5 points|
 | Solution Design |5 points|
-| Data structures |5 points|
 | Problem Solving |5 points|
 | Automated Tests |5 points|
-|**Overall Score**|**30 points**|
+|**Overall Score**|**25 points**|
 
 
 Scoring algorithm:
@@ -56,10 +55,10 @@ Scoring algorithm:
 ```python
 
 def have_you_passed_the_test(overall_score, bonus_points):
-    if overall_score >= 24:
+    if overall_score >= 19:
         return True
-    elif overall_score > 21:
-        return overall_score + bonus_points >= 24
+    elif overall_score > 16:
+        return overall_score + bonus_points >= 19
 
     return False
 ```
