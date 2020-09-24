@@ -21,7 +21,7 @@ Application Structure
     ├── index.html       ~ Landing page of the application containing Login details
     └── _main.html       ~ Basic layout html file included in all other html files
 
-Recomendations ( can implement if more time permits)
+Improvements ( can implement if more time permits)
 ---------------
 1. Can improve the application look and feel by adding more styling components
 2. Instead of using JSON files as storage can go for a database providing more security
