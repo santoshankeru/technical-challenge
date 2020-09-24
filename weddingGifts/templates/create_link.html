@@ -1,0 +1,56 @@
+{%extends '_main.html' %}
+
+{%block body %}
+
+<form action="" method="POST">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-6">
+            <div class="form-label-group mr-1">
+                <input type="text" id="link_id" name="link_id" class="form-control placeholder-shown"
+                    placeholder="Link ID" value={{lID}}>
+                <label for="link_id">Link ID</label>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="form-label-group mr-1">
+                <input type="date" id="link_valid_to" name="link_valid_to" class="form-control placeholder-shown"
+                    placeholder="Link Valid To" value={{request.form.link_valid_to}}>
+                <label for="link_valid_to">Link Valid To</label>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Brand </th>
+                    <th> Price </th>
+                    <th> In Stock </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prod in products %}
+                <tr>
+                    <td><input type="checkbox" name="items_list" value="{{prod.id}}" id="{{prod.id}}"> </td>
+                    <td>{{prod.id}}</td>
+                    <td>{{prod.name}}</td>
+                    <td>{{prod.brand}}</td>
+                    <td>{{prod.price}}</td>
+                    <td>{{prod.in_stock_quantity}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btn-primary my-1" style="float: right;">Submit</button>
+        </div>
+        
+    </div>
+</form>
+
+{%endblock%}

@@ -1,0 +1,22 @@
+[
+    {
+        "link_id": "d1312871ceafc56ba7b45a8392d3ba",
+        "author": "demo_user@email.com",
+        "create_date": "2020-09-24",
+        "valid_till": "2020-09-30",
+        "share_url": "http://127.0.0.1:5000/gift_link/d1312871ceafc56ba7b45a8392d3ba",
+        "status": "active",
+        "products": [
+            "1",
+            "5",
+            "9",
+            "11",
+            "12",
+            "18"
+        ],
+        "purchases": [
+            "5",
+            "11"
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+{% extends '_main.html' %}
+
+{% block body %}
+<div class="row justify-content-between">
+    <div class="col-md-10">
+        <h1>Welcome <small> {{session.username}}</small></h1>
+    </div>
+    <div class="col-md-2 justify-content-md-center" style="margin:auto; text-align: center;">
+        <a href="/create_link" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Create link</a>
+    </div>
+    
+</div>
+
+<hr>
+{% if gl %}
+<table class="table table-striped">
+    <tr>
+        <th>Link - ID</th>
+        <th>Valid Till</th>
+        <th>Created On</th>
+        <th>Shareable  Link</th>
+        <th></th>
+    </tr>
+
+    {% for link in gl %}
+    <tr>
+        <td>{{link.link_id}}</td>
+        <td>{{link.valid_till}}</td>
+        <td>{{link.create_date}}</td>
+        <td>{{link.share_url}}</td>
+        <td><a href="edit_list/{{link.link_id}}" class="btn btn-default pull-right">Edit / View</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="jumbotron text-center">
+    <h1>No Gift links were found </h1>
+    <p class="lead">Go ahead and create some links</p>
+</div>
+{% endif %}
+{% endblock %}

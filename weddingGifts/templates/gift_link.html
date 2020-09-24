@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gift List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+
+    {%block body %}
+
+    <form class="form-signin" action="" method="POST" style="max-width: 80% !important">
+        <div class="row justify-content-md-center">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Brand </th>
+                        <th> Price </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prod in prd_data %}
+                    <tr>
+                        <td>{{prod.name}}</td>
+                        <td>{{prod.brand}}</td>
+                        <td>{{prod.price}}</td>
+                        {% if prod.is_purchased == 0  and prod.in_stock_quantity > 0%}
+                        <td><button type="submit" class="btn btn-primary my-1" name="gift_now" value="{{prod.link_id }}"
+                                id="{{prod.id}}">Gift Now</button>
+                            {% else %}
+                        <td></td>
+                        {% endif %}
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+    {%endblock%}
+</body>
+
+</html>

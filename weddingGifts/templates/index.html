@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gift List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form-signin" action="" method="POST">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="{{ url_for('static', filename='img/img.png') }}" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Welcome to Wedding Gifts</h1>
+        </div>
+
+        <div class="form-label-group">
+            <input type="email" id="username" name="username" class="form-control placeholder-shown"
+                placeholder="Email address" required autofocus value={{request.form.username}}>
+            <label for="username">Email address</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="password" name="password" class="form-control placeholder-shown"
+                placeholder="Password" required value={{request.form.password}}>
+            <label for="password">Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+</body>
+
+</html>
